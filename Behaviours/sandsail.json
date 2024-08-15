@@ -1,0 +1,246 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"1kvqIUNppdMxdFo3ZxK9LkhqFsCN7u5s": {
+			"height": 92,
+			"title": "repeatMoveHack",
+			"width": 189,
+			"x": 1434,
+			"y": -160
+		},
+		"2RIWgOALfCUNs44dW1fOTxElinAwKkcV": {
+			"height": 90,
+			"title": "Common.relativeMove",
+			"width": 225,
+			"x": 1372,
+			"y": 172
+		},
+		"4OdTeunJRItvdO0L8o07VzEht9yxOzpE": {
+			"height": 90,
+			"title": "Common.relativeMove",
+			"width": 225,
+			"x": 1374,
+			"y": 290
+		},
+		"B840BdPYSBCgGtrGt4a7uE1L4QeLNbZW": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1237,
+			"y": -9
+		},
+		"CtghS4wP25lHyTOCTtotVlIkfEWbOsHv": {
+			"height": 94,
+			"title": "getWind",
+			"width": 159,
+			"x": 1436,
+			"y": -58
+		},
+		"UMt8u0GIuEPFthaTe7Lu4o2sOkmQgbMJ": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 1124,
+			"y": 247
+		},
+		"VsBtOFJx3cEfxYt8sEGNlZMYNoc1mJru": {
+			"height": 60,
+			"title": "repeatSensorLoading",
+			"width": 219,
+			"x": 897,
+			"y": -5
+		},
+		"Ww5D3RaOxUK1vvrFPtPm7X80jFXNerxF": {
+			"height": 94,
+			"title": "CreateMoveVector",
+			"width": 456,
+			"x": 1433,
+			"y": 44
+		},
+		"YP5ndzE0oGhcKq92GSnDZIgxg2yZHX5e": {
+			"height": 92,
+			"title": "switchInit",
+			"width": 139,
+			"x": 429,
+			"y": -78
+		},
+		"pm0LtFMIyfrwvOVSp9LEyf8CnS0m1Bph": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 627,
+			"y": 162
+		},
+		"rLnYNnzpfYIp3aDj7xYiY4LXkmgNxFyt": {
+			"height": 70,
+			"title": "roleSplit",
+			"width": 202,
+			"x": 397,
+			"y": 164
+		},
+		"sWgTOtfdg16hyw6I1It6B2eCzTiPJScJ": {
+			"height": 60,
+			"title": "repeatMovement",
+			"width": 189,
+			"x": 880,
+			"y": 256
+		},
+		"uMIpfdTqznjEePbT7CxluWxxPro3sEyS": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 213,
+			"y": 10
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_srb_sandsail.battle commander" ],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "YP5ndzE0oGhcKq92GSnDZIgxg2yZHX5e",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "switch"
+			}, {
+				"name": "value",
+				"value": "false"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [ {
+						"children": [ {
+							"children": [],
+							"id": "1kvqIUNppdMxdFo3ZxK9LkhqFsCN7u5s",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "var",
+								"value": "switch"
+							}, {
+								"name": "value",
+								"value": "not switch"
+							}, {
+								"name": "scriptName",
+								"value": "store"
+							} ],
+							"scriptName": "store"
+						}, {
+							"children": [],
+							"id": "CtghS4wP25lHyTOCTtotVlIkfEWbOsHv",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "var",
+								"value": "mapWind"
+							}, {
+								"name": "value",
+								"value": "map.Wind()"
+							}, {
+								"name": "scriptName",
+								"value": "store"
+							} ],
+							"scriptName": "store"
+						}, {
+							"children": [],
+							"id": "Ww5D3RaOxUK1vvrFPtPm7X80jFXNerxF",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "var",
+								"value": "vecWind"
+							}, {
+								"name": "value",
+								"value": "Vec3(mapWind[\"normDirX\"],0,mapWind[\"normDirZ\"]) * 500"
+							}, {
+								"name": "scriptName",
+								"value": "store"
+							} ],
+							"scriptName": "store"
+						} ],
+						"id": "B840BdPYSBCgGtrGt4a7uE1L4QeLNbZW",
+						"nodeType": "sequence",
+						"parameters": []
+					} ],
+					"id": "VsBtOFJx3cEfxYt8sEGNlZMYNoc1mJru",
+					"nodeType": "repeat",
+					"parameters": []
+				}, {
+					"children": [ {
+						"children": [ {
+							"children": [],
+							"id": "2RIWgOALfCUNs44dW1fOTxElinAwKkcV",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "dist",
+								"value": "vecWind"
+							}, {
+								"name": "fight",
+								"value": "false"
+							}, {
+								"name": "scriptName",
+								"value": "Common.relativeMove"
+							} ],
+							"scriptName": "Common.relativeMove"
+						}, {
+							"children": [],
+							"id": "4OdTeunJRItvdO0L8o07VzEht9yxOzpE",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "dist",
+								"value": "vecWind"
+							}, {
+								"name": "fight",
+								"value": "false"
+							}, {
+								"name": "scriptName",
+								"value": "Common.relativeMove"
+							} ],
+							"scriptName": "Common.relativeMove"
+						} ],
+						"id": "UMt8u0GIuEPFthaTe7Lu4o2sOkmQgbMJ",
+						"nodeType": "luaCondition",
+						"parameters": [ {
+							"name": "expression",
+							"value": "switch==true"
+						}, {
+							"name": "repeat",
+							"value": "true"
+						} ]
+					} ],
+					"id": "sWgTOtfdg16hyw6I1It6B2eCzTiPJScJ",
+					"nodeType": "repeat",
+					"parameters": []
+				} ],
+				"id": "pm0LtFMIyfrwvOVSp9LEyf8CnS0m1Bph",
+				"nodeType": "parallel",
+				"parameters": [ {
+					"name": "mode",
+					"value": "all-success"
+				} ]
+			} ],
+			"id": "rLnYNnzpfYIp3aDj7xYiY4LXkmgNxFyt",
+			"nodeType": "roleSplit",
+			"parameters": [ {
+				"name": "mode",
+				"value": "all-success"
+			} ]
+		} ],
+		"id": "uMIpfdTqznjEePbT7CxluWxxPro3sEyS",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}
