@@ -72,6 +72,13 @@
 			"x": 429,
 			"y": -78
 		},
+		"Ymf5OlXPqk5q0DDtlo7jmLWsGEu1FkkL": {
+			"height": 90,
+			"title": "Common.relativeMove",
+			"width": 225,
+			"x": 643,
+			"y": 391
+		},
 		"pm0LtFMIyfrwvOVSp9LEyf8CnS0m1Bph": {
 			"height": 70,
 			"title": "parallel",
@@ -104,6 +111,9 @@
 	"roles": [ {
 		"categories": [ "nota_srb_sandsail.battle commander" ],
 		"name": "Role 0"
+	}, {
+		"categories": [],
+		"name": "default"
 	} ],
 	"root": {
 		"children": [ {
@@ -231,6 +241,21 @@
 					"name": "mode",
 					"value": "all-success"
 				} ]
+			}, {
+				"children": [],
+				"id": "Ymf5OlXPqk5q0DDtlo7jmLWsGEu1FkkL",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "dist",
+					"value": "{x = 0, z = 0}"
+				}, {
+					"name": "fight",
+					"value": "false"
+				}, {
+					"name": "scriptName",
+					"value": "Common.relativeMove"
+				} ],
+				"scriptName": "Common.relativeMove"
 			} ],
 			"id": "rLnYNnzpfYIp3aDj7xYiY4LXkmgNxFyt",
 			"nodeType": "roleSplit",
